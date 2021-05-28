@@ -1,5 +1,7 @@
 The project is a text editor in linux env, similar to vim in some aspects but probably has more similarities to other every-day editors. 
 
+I do use it in my school project development. It is very easy to use ,if you are not used to vim at the moment.
+
 Please use 'make' to build it and use './LiTE <filename>' to run it. 
 
 Its main features, other than viewing and editing files, include highlighting keywords in C files, and two-way incremental search.
