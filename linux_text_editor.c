@@ -137,7 +137,7 @@ struct editorSyntax HLDB[] = {
 		HL_HIGHLIGHT_NUMBERS | HL_HIGHLIGHT_STRINGS // flags
 	}, // can add more like .py
 	{
-		"c", // filetype
+		"pascal", // filetype
 		PASCAL_HL_extensions, // filematch
 		PASCAL_HL_keywords, // keywords
 		"{", "}", // comments
