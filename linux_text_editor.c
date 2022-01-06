@@ -126,7 +126,7 @@ char *PASCAL_HL_keywords[] = {
 		"ID", "INTEGER_CONST", "REAL_CONST", "EOF",
 
 		"REAL|", "INTEGER|", "VAR|", "TRUE|", "FALSE|", "BOOLEAN|", "STRING|", NULL
-}
+};
 
 struct editorSyntax HLDB[] = {
 	{
