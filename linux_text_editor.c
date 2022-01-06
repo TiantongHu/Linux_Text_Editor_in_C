@@ -111,15 +111,22 @@ struct editorConfig E; // editor config the program uses
 /*** filetypes ***/
 
 char *C_HL_extensions[] = {".c", ".h", ".cpp", NULL};
+char *PASCAL_HL_extensions[] = {".pas", ".pp", ".inc", NULL};
 
 char *C_HL_keywords[] = {
 		"#include", "switch", "if", "while", "for", "break", "continue", "return", "else",
-		  "struct", "union", "typedef", "static", "enum", "class", "case", "#define",
+		"struct", "union", "typedef", "static", "enum", "class", "case", "#define",
 
-		   // second type terminates with '|', can have no second type
-		  "int|", "long|", "double|", "float|", "char|", "unsigned|", "signed|",
-		  "void|", NULL
+		// second type terminates with '|', can have no second type
+		"int|", "long|", "double|", "float|", "char|", "unsigned|", "signed|",
+		"void|", NULL
 };
+char *PASCAL_HL_keywords[] = {
+		"PROGRAM", "DIV", "WRITE", "WRITELN", "PROCEDURE", "IF", "ELSE", "THEN", "BEGIN", "END",
+		"ID", "INTEGER_CONST", "REAL_CONST", "EOF",
+
+		"REAL|", "INTEGER|", "VAR|", "TRUE|", "FALSE|", "BOOLEAN|", "STRING|", NULL
+}
 
 struct editorSyntax HLDB[] = {
 	{
@@ -129,6 +136,13 @@ struct editorSyntax HLDB[] = {
 		"//", "/*", "*/", // comments
 		HL_HIGHLIGHT_NUMBERS | HL_HIGHLIGHT_STRINGS // flags
 	}, // can add more like .py
+	{
+		"c", // filetype
+		PASCAL_HL_extensions, // filematch
+		PASCAL_HL_keywords, // keywords
+		"{", "}", // comments
+		HL_HIGHLIGHT_NUMBERS | HL_HIGHLIGHT_STRINGS
+	},
 }; // highlight database
 
 #define HLDB_ENTRIES (sizeof(HLDB) / sizeof(HLDB[0])) // len of HLDB
