@@ -122,10 +122,9 @@ char *C_HL_keywords[] = {
 		"void|", NULL
 };
 char *PASCAL_HL_keywords[] = {
-		"PROGRAM", "DIV", "WRITE", "WRITELN", "PROCEDURE", "IF", "ELSE", "THEN", "BEGIN", "END",
-		"ID", "INTEGER_CONST", "REAL_CONST", "EOF",
+		"PROGRAM", "DIV", "PROCEDURE", "IF", "ELSE", "THEN", "BEGIN", "END", "ID", "EOF", "VAR",
 
-		"REAL|", "INTEGER|", "VAR|", "TRUE|", "FALSE|", "BOOLEAN|", "STRING|", NULL
+		"WRITE|", "WRITELN|", "REAL|", "INTEGER|", "TRUE|", "FALSE|", "BOOLEAN|", "STRING|", NULL
 };
 
 struct editorSyntax HLDB[] = {
@@ -137,10 +136,10 @@ struct editorSyntax HLDB[] = {
 		HL_HIGHLIGHT_NUMBERS | HL_HIGHLIGHT_STRINGS // flags
 	}, // can add more like .py
 	{
-		"pascal", // filetype
-		PASCAL_HL_extensions, // filematch
-		PASCAL_HL_keywords, // keywords
-		"{", "}", // comments
+		"pascal", 
+		PASCAL_HL_extensions, 
+		PASCAL_HL_keywords,
+		"{}", "{", "}", 
 		HL_HIGHLIGHT_NUMBERS | HL_HIGHLIGHT_STRINGS
 	},
 }; // highlight database
