@@ -11,6 +11,10 @@ Also working on add a new key binding to run PASCAL compiler and output results 
 This project does not use SDL but directly sends VT100 Escaping Sequences, exactly like what the ncurses lib does, this keeps the program lightweight and low.
 Though, maybe it's really a good idea to rewrite the project with ncurses.
 
+Example:
+![image](https://user-images.githubusercontent.com/54729763/148653595-351da770-faf2-4c61-ac3a-75b1cba62e43.png)
+
+
 Document about VT100: https://en.wikipedia.org/wiki/VT100 
                       https://vt100.net/docs/vt100-ug/chapter3.html
 Document about ANSI : https://en.wikipedia.org/wiki/ANSI_escape_code
